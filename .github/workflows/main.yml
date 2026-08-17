@@ -2,6 +2,7 @@ name: demo_push
 
 on:
   push: 
+ 
 
 jobs:
   build:
@@ -13,6 +14,7 @@ jobs:
 
   need:
     runs-on: ubuntu-latest
+    timeout-minutes: 0
     needs: build
     steps:
       - name: Build
