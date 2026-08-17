@@ -10,3 +10,10 @@ jobs:
     steps:
       - name: Build
         run: echo "Pipeline triggered successfully"
+
+  need:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Build
+        run: echo "Pipeline triggered successfully"
